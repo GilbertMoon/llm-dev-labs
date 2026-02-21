@@ -159,3 +159,45 @@ Paste the exact prompt you used (no secrets).
 - 결정(Decision): 채택(Adopt)
 - 이유(Why): Spec 템플릿이 재현성을 크게 향상시킨다.
 - 다음 행동(Next action): 3회차에서 이 템플릿으로 실제 “Draft” 코드를 생성한다.
+
+
+### 1) Meta
+- Date:
+- Session: #03
+- Task Type: Draft
+- Target File(s): labs/lab03/log_parser.py
+- Environment: Windows, Python 3.10+
+
+### 2) Input Summary (Redacted)
+- Goal: 고정된 Spec을 기반으로 검증 가능한 초안(Draft) 구현을 생성한다.
+- Constraints: 시그니처 고정, 스키마 고정, 에러 dict 형식 고정
+- Edge cases: 비정상 라인, 필드 누락, 추가 공백, 토큰 마스킹
+- What NOT to do: 외부 의존성 금지, 숨겨진 가정 금지
+
+### 3) Model & Tools
+- Model:
+- Mode/Tool:
+- Prompt Version: v1
+
+### 4) Prompt (Safe to share)
+(붙여넣기) Draft 생성 프롬프트
+
+### 5) Output Summary
+- Implemented:
+  - mask_tokens: (요약)
+  - parse_line: (요약)
+- Risks / TODOs:
+  - TODO: (예: 여러 token 처리, msg 이스케이프 처리 등)
+
+### 6) Verification Plan (Before Applying)
+- main() 데모 실행
+- 수동 반례 테스트:
+  - divide 케이스는 해당 없음
+  - 비정상 라인 / latency_ms 누락 / 정수 변환 실패
+  - msg에 따옴표 포함(향후)
+- Next: 이후 회차에서 유닛 테스트 추가
+
+### 7) Decision
+- Decision: Adopt / Modify / Reject
+- Why:
+- Next action:
